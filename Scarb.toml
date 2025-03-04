@@ -1,0 +1,16 @@
+[package]
+name = "xstrkarb"
+version = "0.1.0"
+edition = "2023_11"
+
+# See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest.html
+
+[dependencies]
+starknet = ">=2.6.0" # cairo version
+strkfarm_contracts = { git = "https://github.com/strkfarm/strkfarm-contracts", branch = "main"}
+
+[dev-dependencies]
+snforge_std = { git = "https://github.com/foundry-rs/starknet-foundry", tag = "v0.32.0" }
+
+[[target.starknet-contract]]
+casm = true
